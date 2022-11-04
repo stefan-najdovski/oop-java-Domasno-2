@@ -1,4 +1,4 @@
-package me.snajdovski.oop.domasno2;
+package me.snajdovski.oop.domasno2.Student;
 
 public class Ocenka {
     public String datumNaIspit;

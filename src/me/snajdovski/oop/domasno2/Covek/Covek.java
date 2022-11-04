@@ -1,16 +1,17 @@
-package me.snajdovski.oop.domasno2;
+package me.snajdovski.oop.domasno2.Covek;
 
 /**
  * @author Stefan Najdovski
  * @version 1.0
- * @date 04-12-22
- * @description Klasata e nameneta za reprezentacija na covek so osnovni atributi.
+ * @date 04-11-22
+ * @description Klasata e nameneta za reprezentacija na covek so najosnovni atributi i metodite za pristap do niv.
  */
-import java.util.Date;
+
 
 public class Covek {
 
-    public String ime,prezime,rasa;
+    public String ime;
+    public String prezime;
     public int godini;
 
     /***
@@ -23,24 +24,39 @@ public class Covek {
      * @param visina Visina na covekot izrazena vo centimetri (float)
      * @param ziv   Dali covekot e ziv, boolean vrednost (true/false) true = ziv, false = mrtov
      * @param datumNaRaganje Datum na raganje na covekot vo formatot "YYYY-MM-DD"
+     * @param nacionalost   Nacionalnost na covekot
+     *
      */
-    public int pol;
-    public float tezina,visina;
+    public float tezina, visina;
     public boolean daliEziv;
     public String datumNaRaganje;
-   public enum nacionalost {Makedonec,Albanec,Srbin,Bugarin,Vlav,Drugo};
+    nacionalost etnickaPripadnostEnum;
+    pol polEnum;
+    rasa rasaEnum;
 
-    public Covek(String ime, String prezime, String rasa, int godini, int pol, float tezina, float visina, boolean daliEziv, String datumNaRaganje, enum nacionalost) {
+    public Covek(String ime, String prezime, rasa rasaEnum, int godini, pol polEnum, float tezina, float visina, boolean daliEziv, String datumNaRaganje, nacionalost etnickaPripadnostEnum) {
         this.ime = ime;
         this.prezime = prezime;
-        this.rasa = rasa;
+        this.rasaEnum = rasaEnum;
         this.godini = godini;
-        this.pol = pol;
+        this.polEnum = polEnum;
         this.tezina = tezina;
         this.visina = visina;
         this.daliEziv = daliEziv;
         this.datumNaRaganje = datumNaRaganje;
-        this.nacionalost = nacionalost;
+        this.etnickaPripadnostEnum = etnickaPripadnostEnum;
+    }
+
+    public String getRasa() {
+        return rasaEnum.toString();
+    }
+
+    public void setRasa(rasa rasaEnum) {
+        this.rasaEnum = rasa.valueOf(rasaEnum.toString());
+    }
+
+    public String getPol() {
+        return polEnum.toString();
     }
 
     public String getIme() {
@@ -51,16 +67,16 @@ public class Covek {
         return prezime;
     }
 
-    public String getRasa() {
-        return rasa;
+    public void setPol(String polEnum) {
+        this.polEnum = pol.valueOf(polEnum);
     }
 
     public int getGodini() {
         return godini;
     }
 
-    public int getPol() {
-        return pol;
+    public nacionalost getEtnickaPripadnostEnum() {
+        return etnickaPripadnostEnum;
     }
 
     public float getTezina() {
@@ -87,16 +103,18 @@ public class Covek {
         this.prezime = prezime;
     }
 
-    public void setRasa(String rasa) {
-        this.rasa = rasa;
+    public void setEtnickaPripadnostEnum(nacionalost etnickaPripadnostEnum) {
+        this.etnickaPripadnostEnum = etnickaPripadnostEnum;
     }
 
     public void setGodini(int godini) {
         this.godini = godini;
     }
 
-    public void setPol(int pol) {
-        this.pol = pol;
+    @Override
+    public String toString() {
+        return "Covek Object " + "ime= " + ime + ", prezime=" + prezime + " rasa= " + getRasa() + "  godini= " + godini + " pol=" + getPol() + " tezina=" + tezina + " visina=" + visina + " daliEziv=" + daliEziv + " datumNaRaganje=" + datumNaRaganje + " etnickaPripadnostEnum=" + getEtnickaPripadnostEnum();
+
     }
 
     public void setTezina(float tezina) {
@@ -115,8 +133,9 @@ public class Covek {
         this.datumNaRaganje = datumNaRaganje;
     }
 
-    @Override
-    public String toString() {
-    return "Covek Object " + "ime= " + ime  + ", prezime=" + prezime + " rasa= " + rasa + "  godini= " + godini + " pol=" + pol + " tezina=" + tezina + " visina=" + visina + " daliEziv=" + daliEziv + " datumNaRaganje=" + datumNaRaganje;
-    }
+    public enum pol {Masko, Zensko, Drugo}
+
+    public enum nacionalost {Makedonska, Albanska, Srbska, Bosanska, Turska, Evrejska, Bugarska, Grcka, Druga}
+
+    public enum rasa {Bela, Crna, Smega, Zolta, Crvena, Druga}
 }

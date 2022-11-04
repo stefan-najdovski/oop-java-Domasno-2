@@ -1,9 +1,8 @@
-package me.snajdovski.oop.domasno2;
+package me.snajdovski.oop.domasno2.Student;
 
 import me.snajdovski.oop.domasno2.Covek.Covek;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Student extends Covek {
 
