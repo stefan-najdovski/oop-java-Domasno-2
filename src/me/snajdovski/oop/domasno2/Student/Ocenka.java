@@ -24,8 +24,17 @@ public class Ocenka {
         return ocenka;
     }
 
-    public void setOcenka(float ocenka) {
-        this.ocenka = ocenka;
+    /***
+     * @this.ocenka e -1 ako ima greska vo vnesuvanjeto na ocenkata t.e ne e vo rangot od 5 do 10
+     */
+   public void setOcenka(float ocenka) {
+        if(ocenka < 5 || ocenka > 10) {
+            System.out.println("Ocenkata mora da e od 5 do 10");
+            this.ocenka = -1;
+        } else {
+            this.ocenka = ocenka;
+        }
+
     }
 
     public String getDatum() {
