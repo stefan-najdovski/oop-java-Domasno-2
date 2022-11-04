@@ -1,5 +1,14 @@
 # oop-java-Domasno-2
 
+## Output:
+```Java
+Ocenki pred dodavanje na nova ocenka
+[ Datum na ispit: 22.11.2022 Predmet: PKM Ocenka: 6.0 ,  Datum na ispit: 23.11.2022 Predmet: Algoritmi Ocenka: 10.0 ,  Datum na ispit: 25.11.2022 Predmet: Organizacisko Pretpriemnistvo Ocenka: 7.0 ]
+Prosekot na studentot e: 7.6666665
+Ocenki potoa so OOP (o1 objektot vo nizata:Ocenka@846492085
+[ Datum na ispit: 22.11.2022 Predmet: PKM Ocenka: 6.0 ,  Datum na ispit: 23.11.2022 Predmet: Algoritmi Ocenka: 10.0 ,  Datum na ispit: 25.11.2022 Predmet: Organizacisko Pretpriemnistvo Ocenka: 7.0 ,  Datum na ispit: 21.11.2022 Predmet: OOP Ocenka: 10.0 ]
+Prosekot na studentot e: 8.25
+```
 	
 New assignment
 	
