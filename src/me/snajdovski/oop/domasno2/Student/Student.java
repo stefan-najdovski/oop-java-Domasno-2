@@ -14,8 +14,18 @@ public class Student extends Covek {
         super(ime, prezime, rasaEnum, godini, polEnum, tezina, visina, daliEziv, datumNaRaganje, etnickaPripadnostEnum);
         this.ocenki = ocenki;
     }
+
+    /***
+     * ako ima greska vo vnesuvanjeto na ocenkata t.e ne e vo rangot od 5 do 10
+     * togas ocenkata ne ja dodavame vo nizata
+     */
     public void SetOcenka(Ocenka o){
-        ocenki.add(o);
+        if(o.getOcenka() < 5 || o.getOcenka()  > 10) {
+            System.out.println("Greska: Ocenkata mora da e od 5 do 10!");
+        } else {
+            ocenki.add(o);
+        }
+
     }
    public void GetProsek(){
         float prosek = 0;

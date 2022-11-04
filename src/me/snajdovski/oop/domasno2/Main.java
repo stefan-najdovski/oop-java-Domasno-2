@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        Ocenka o1 = new Ocenka("21.11.2022", "OOP", 8);
+        Ocenka o1 = new Ocenka("21.11.2022", "OOP", 11);
 
         Ocenka o2 = new Ocenka("22.11.2022", "PKM", 6);
         Ocenka o3 = new Ocenka("23.11.2022", "Algoritmi", 10);
